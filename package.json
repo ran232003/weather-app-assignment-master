@@ -1,7 +1,7 @@
 {
   "name": "weather-app-assignment-master",
   "version": "0.1.0",
-  "homepage": "https://ran232003.github.io/weather-app-assignment-master",
+  "homepage": "http://ran232003.github.io/weather-app-assignment-master",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.8.2",

@@ -1,0 +1,9 @@
+.WeatherCard{
+   
+    width:150px;
+}
+.removeIcon{
+    cursor: pointer;
+    /* border: 3px solid green; */
+    float: right;
+}

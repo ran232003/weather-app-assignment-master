@@ -1,0 +1,50 @@
+.card2 {
+    list-style: none;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 100%;
+    max-width: 70rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 6px;
+    background: white;
+    margin-top: 70px;
+    /* border-color: black;
+    border-style: solid; */
+    margin-bottom: 10px;
+    overflow-y: scroll;
+ 
+  }
+  
+  ::-webkit-scrollbar {
+    width: 20px;
+  }
+  .list-item2{
+    margin-left: 50px;
+    width: 150px;
+    
+    
+    
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #66cc99; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #66cc99; 
+  }
+  @media screen and (max-width: 1057px) {
+    ::-webkit-scrollbar {
+        width: 5px;
+      }
+    
+  }

@@ -60,14 +60,14 @@ const HomePage = ()=>{
          }
        }
      
-         const response = await fetch(`http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${apiKey}&q=${obj.latitude}%2C${obj.longitude}&language=en-us&details=false&toplevel=true`,{})
+         const response = await fetch(`https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${apiKey}&q=${obj.latitude}%2C${obj.longitude}&language=en-us&details=false&toplevel=true`,{})
          const data =  await response.json();
          let name = data.EnglishName;
          let code = data.Key;
-         const res2 = await fetch(`http://dataservice.accuweather.com/currentconditions/v1/${code}?apikey=${apiKey}&language=en-us&details=true`)
+         const res2 = await fetch(`https://dataservice.accuweather.com/currentconditions/v1/${code}?apikey=${apiKey}&language=en-us&details=true`)
          const data2 =  await res2.json();
           dispatch(weatherActions.setCurrentWeather(data2[0]));
-          const res = await fetch(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${code}?apikey=${apiKey}&language=en-us&details=false&metric=true`)
+          const res = await fetch(`https://dataservice.accuweather.com/forecasts/v1/daily/5day/${code}?apikey=${apiKey}&language=en-us&details=false&metric=true`)
           const data3 =  await res.json();
            dispatch(weatherActions.setWeatherOfTheWeek(data3));
           dispatch(weatherActions.setKey(code));

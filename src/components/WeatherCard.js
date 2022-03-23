@@ -37,10 +37,10 @@ const WeatherCard = (props)=>{
         if(currentKey){
             dispatch(weatherActions.setKey(currentKey));
             dispatch(weatherActions.setCity(city))
-            const res2 = await fetch(`http://dataservice.accuweather.com/currentconditions/v1/${currentKey}?apikey=${apiKey}&language=en-us&details=true`)
+            const res2 = await fetch(`https://dataservice.accuweather.com/currentconditions/v1/${currentKey}?apikey=${apiKey}&language=en-us&details=true`)
     const data2 =  await res2.json();
      dispatch(weatherActions.setCurrentWeather(data2[0]));
-     const res = await fetch(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${currentKey}?apikey=${apiKey}&language=en-us&details=false&metric=true`)
+     const res = await fetch(`https://dataservice.accuweather.com/forecasts/v1/daily/5day/${currentKey}?apikey=${apiKey}&language=en-us&details=false&metric=true`)
     const data =  await res.json();
      dispatch(weatherActions.setWeatherOfTheWeek(data));
      navigate("/");
